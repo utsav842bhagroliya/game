@@ -1,0 +1,68 @@
+{% extends 'header-footer.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- header start -->
+<header>
+    <div class="container-fluid bg-white">
+        <div class="row header py-2">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2  logo ">
+               <h4>EARN-MONEY</h4>
+            </div>
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2 icon text-white reg">
+                <a class="btn btn-danger" href="{% url 'registration' %}">Registration</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- header End -->
+
+
+<!-- main start -->
+<br><br>
+    <main>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-4 col-md-4 col-sm-4 content-center">
+                        <p style="color: red;">{{msg}}</p>
+                            <form class="form" action="" method="POST">
+                                {% csrf_token %}
+                                <div class="login-header">
+                                    <h1>LOG IN</h1>
+                                </div>
+                                <br><br>
+                                <div class="content">                                                
+                                    <div class="input-group">
+                                        <input type="text" name="mobile" class="form-control" placeholder="Enter Your Mobile Number" required>
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-phone"></i>
+                                        </span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="password" name="password" placeholder="Enter Your Password" class="form-control" required />
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="footer text-center">
+                                   <button type="submit" class="btn btn-danger btn-round px-5">LOG IN</button></a>
+                                    <br>
+                                    <br>
+                                    <h5><a href="" class="link">Forgot Password?</a></h5>
+                                </div>
+                            </form>
+                    </div>
+                </div>   
+            </div>        
+        </div>
+
+    </main>
+<!-- main end -->
+
+{% endblock %}

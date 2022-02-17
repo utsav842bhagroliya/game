@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+.logo{
+    text-align: left;
+    color: #777777;
+}
+.reg{
+    text-align: right;
+}
+.header{
+    text-align: center;
+    border-bottom: 1px solid hsla(0, 1%, 78%, 0.699);
+}
+
+ button{
+    padding: 6px 12px;
+    border-radius: 5px !important;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+}
+
+.number-btn button{
+    /* padding: 0.4rem 5.3rem; */
+    border-radius: 5px;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+}
+
+ .btn .fbtn{
+    border-radius: 5px;
+    border: 1px solid #777777;
+    font-weight: 500;
+    padding: 5px 12px;
+    color: rgb(78, 78, 241);
+}
+
+.login-header{
+    text-align: center;
+    margin-top: 5rem;
+    color: #777777;
+}
+
+.form-group .form-control + .input-group-addon,
+.input-group .form-control + .input-group-addon {
+  padding: 9px 18px 5px 0;
+}
+.form-group .input-group-addon,
+.input-group .input-group-addon {
+  padding: 8px 0 6px 18px;
+}
+
+.input-group-addon {
+  background-color: #fff;
+  border: 1px solid #dad9d9;
+  border-radius: 5px;
+  color: #555;
+  padding: -0.5rem 0 -0.5rem -0.3rem;
+  -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.input-group,
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-right: 0 none;
+}
+
+.link{
+    font-size: 1rem;
+    color: #ff0000;
+}
+button {
+    padding: 6px 12px;
+    border-radius: 5px !important;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+}
+
+.account-header{
+    padding-top: 0;
+    color: #777777;
+}
+.acc-input input{
+    border: none;
+}
+
+
+
+
+
+
+/* The Modal (background) */
+.ebcf_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ebcf_modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.ebcf_close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ebcf_close:hover,
+.ebcf_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.route-grid-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, [col] 1fr);
+  grid-template-rows: repeat(2, [row] 1fr);
+  grid-gap: 10px 10px;
+}
+
+.route-grid-container .btn {
+  width: 100%;
+}
+

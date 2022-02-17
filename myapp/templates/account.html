@@ -1,0 +1,449 @@
+{% extends 'header-footer.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- header start -->
+    <header>
+      <div class="container-fluid bg-white">
+        <div class="row header py-2">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2 logo">
+            <h4>EARN-MONEY</h4>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2 icon text-white reg"
+          >
+            <a class="btn btn-danger" href="">LOGOUT</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- header End -->
+
+    <!-- main start -->
+    <br />
+    <main>
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 content-center">
+              <form class="form" action="" method="POST">
+                {% csrf_token %}
+                <div class="account-header">
+                  <h2>Your Account Details</h2>
+                </div>
+                <br />
+                <div class="contents">
+                  <div class="input-group">
+                    <div class="col-4">
+                      <label for="">User Name : </label>&nbsp;
+                    </div>
+                    <div class="col-4 acc-input">
+                      <input type="text" value="{{uid.name}}" />
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <div class="col-4"><label for="">id : </label>&nbsp;</div>
+                    <div class="col-4 acc-input">
+                      <input type="text" value="{{uid.id}}" />
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <div class="col-4">
+                      <label for="">Mobile Number : </label>&nbsp;
+                    </div>
+                    <div class="col-4 acc-input">
+                      <input type="text" value="{{uid.mobile}}" />
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <div class="col-4">
+                      <label for="">Available Balance : </label>&nbsp;
+                    </div>
+                    <div class="col-4 acc-input">
+                      <input type="text" value=" ₹ {{uid.rechage}}" />
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="footer">
+                  <a href="{% url 'recharge' %}">
+                  <button type="button" style="background-color: #ff4500">
+                    Recharge
+                  </button>
+                  </a>
+                  <br /><br />
+                  <button type="button" class="btn btn-outline-danger">
+                    Change Nick Name
+                  </button>
+                  <br /><br />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <br /><br />
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Promotion
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, illum! Maiores quia explicabo doloribus quo nam
+                  possimus deleniti vel nisi repellendus! Aperiam aut ab facere
+                  aliquid commodi debitis at dicta. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Sed illo temporibus quasi
+                  quisquam nesciunt, laudantium officia corrupti consequuntur
+                  tempora libero eligendi consectetur unde et magnam vitae!
+                  Facilis quos iusto necessitatibus! Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Provident voluptatibus ea, sequi
+                  ad aliquam expedita consequatur officiis, est reiciendis sint
+                  labore, magnam deserunt temporibus corporis accusamus nam.
+                  Nulla, minus est!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Wallet
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href="#" id="mySizeChart">Deposite Amount</a>
+                    <div id="mySizeChartModal" class="ebcf_modal">
+                      <div class="ebcf_modal-content">
+                        <span class="ebcf_close">&times;</span>
+                        <p>
+                          <div class="container-fluid">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-10 col-md-10 col-sm-10 content-center">
+                                            <form class="form">
+                                                <div class="login-header">
+                                                  <h2>Deposite Amount</h2>
+                                                </div>
+                                                <br><br>
+                                                <div class="content d-flex">                                                
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="100" style="border: none; background-color: #ff4500; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>  
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="200" style="border: none; background-color: #39b54a; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="500" style="border: none; background-color: #6739b9; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="1000" style="border: none; background-color: #fc2779; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>
+                                                </div>
+                                                <br>
+                                                <div class="content">                                                
+                                                    <div class="input-group">
+                                                        <input type="text" value="50000" class="form-control" required />
+                                                        <span class="input-group-addon">
+                                                          <i class="fa fa-rupee"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="footer text-center">
+                                                   <button type="submit" class="btn btn-danger btn-round px-5">Deposite</button></a>
+                                                </div>
+                                            </form>
+                                    </div>
+                                </div>   
+                            </div>        
+                        </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <a href="#" id="Chart">Withdrawal Amount</a>
+                    <div id="ChartModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>
+                          <div class="container-fluid">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-10 col-md-10 col-sm-10 content-center">
+                                            <form class="form">
+                                                <div class="login-header">
+                                                  <h2>Withdrawal Amount</h2>
+                                                </div>
+                                                <br><br>
+                                                <div class="content d-flex">                                                
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="100" style="border: none; background-color: #ff4500; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>  
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="200" style="border: none; background-color: #39b54a; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="500" style="border: none; background-color: #6739b9; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>
+                                                  <div class="input-group">
+                                                    <input id=demoInput type=number value="1000" style="border: none; background-color: #fc2779; border-radius: 5px; padding: 5px 3px;" >
+                                                  </div>
+                                                </div>
+                                                <br>
+                                                <div class="content">                                                
+                                                    <div class="input-group">
+                                                        <input type="text" value="50000" class="form-control" required />
+                                                        <span class="input-group-addon">
+                                                          <i class="fa fa-rupee"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="footer text-center">
+                                                   <button type="submit" class="btn btn-danger btn-round px-5">Withdrawal</button></a>
+                                                </div>
+                                            </form>
+                                    </div>
+                                </div>   
+                            </div>        
+                        </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Bank Card
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href="">Add Card</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Report
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href="">Report</a><br />
+                    <a href="">Total Report</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Gift
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href=""
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione corporis perferendis quia assumenda sint expedita
+                      modi exercitationem libero molestias? Vero enim
+                      necessitatibus quis hic ipsa sapiente iure reiciendis rem
+                      ea?</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  Account Security
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href="">Reset Password</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  App Download
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href="">Android Download</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  Complaints & Suggestions
+                </button>
+              </h2>
+              <div
+                id="collapseEight"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingEight"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Molestias assumenda, officiis hic est soluta alias porro
+                    minima. Numquam similique alias animi debitis, voluptas
+                    consequuntur eum quibusdam, obcaecati excepturi amet
+                    impedit?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  About
+                </button>
+              </h2>
+              <div
+                id="collapseNine"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="panel-body">
+                    <a href="">Privacy Policy</a><br />
+                    <a href="">Risk Disclosure Agreement</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- main end -->
+{% endblock %}

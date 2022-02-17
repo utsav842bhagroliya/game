@@ -1,0 +1,110 @@
+{% extends 'header-footer.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- header start -->
+    <header>
+        <div class="container-fluid bg-white">
+            <div class="row header py-2">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2  logo ">
+                   <h4>EARN-MONEY</h4>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2 icon text-white reg">
+                    <a class="btn btn-primary" href="">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header End -->
+
+    <!-- main section start -->
+    <br><br>
+    <main>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 bg-white">
+                        <div class="media">
+                            <div class="media-title">
+                            <h4>Available Balance</h4><p>₹</p>
+                            </div>
+                            <div class="media-body">
+                                <button style="background-color: #ff4500;">Recharge</button>
+                                <button style="background-color: #fc2779;">Read Rule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        <button style="background-color: #39b54a;">Join Green</button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        <button style="background-color: #6739b9;">Join Violet</button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        <button style="background-color: #ff4019;">Join Red</button>
+                    </div>
+                </div>
+    
+                <br><br><br>
+    
+                <div class="container">
+                    <ul class="related-routes route-grid-container m-t-lg m-b-md">
+                      <li><a class="btn btn-primary" style="background-color: #6739b6;" href="">0</a></li>
+                      <li><a class="btn btn-success" href="">1</a></li>
+                      <li><a class="btn btn-danger" href="">2</a></li>
+                      <li><a class="btn btn-success" href="">3</a></li>
+                      <li><a class="btn btn-danger" href="">4</a></li>
+                      <li><a class="btn btn-primary" style="background-color: #6739b6;" href="">5</a></li>
+                      <li><a class="btn btn-danger" href="">6</a></li>
+                      <li><a class="btn btn-success" href="">7</a></li>
+                      <li><a class="btn btn-danger" href="">8</a></li>
+                      <li><a class="btn btn-success" href="">9</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+
+        <br><br><br>
+    <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>PERIOD</th>
+              <th>PRICE</th>
+              <th>NUMBER</th>
+              <th>RESULT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>15000</td>
+              <td>5</td>
+              <td>round icon-bar</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>15000</td>
+              <td>4</td>
+              <td>round icon-bar</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>15000</td>
+              <td>2</td>
+              <td>round icon-bar</td>
+            </tr>
+          </tbody>
+        </table>    
+      </div>
+    </main>
+
+  <!-- main section end -->
+{% endblock %}

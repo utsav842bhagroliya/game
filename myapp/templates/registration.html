@@ -1,0 +1,89 @@
+{% extends 'header-footer.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- header start -->
+<header>
+    <div class="container-fluid bg-white">
+        <div class="row header py-2">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2  logo ">
+               <h4>EARN-MONEY</h4>
+            </div>
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-2 icon text-white reg">
+                <a class="btn btn-danger" href="{% url 'registration' %}">Registration</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- header End -->
+
+
+<!-- main start -->
+<br><br>
+    <main>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-6 col-sm-6 content-center">
+                        <p style="color: green;">{{reg_msg}}</p>
+                            <form class="form" action="{% url 'registration' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="login-header">
+                                    <h1>REGISTRATION</h1>
+                                </div>
+                                <br><br>
+                                <div class="contents"> 
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
+                                        <span class="input-group-addon">
+                                        </span>
+                                    </div>                                               
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="mobile" placeholder="Enter Your Mobile Number" required>
+                                        <span class="input-group-addon">
+                                        </span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="vcode" placeholder="Enter Varification Code">
+                                        <span class="input-group-addon">
+                                            <input type="button" value="Resend Code" style="padding: 2.4px 8px; border: 1px solid #c7c4c4; border-radius: 3px;">
+                                        </span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="password"  class="form-control" name="password" placeholder="Enter Password" required>
+                                        <span class="input-group-addon">
+                                        </span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" name="cpassword" placeholder="Confrim Password" required>
+                                        <span class="input-group-addon">
+                                        </span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="icode" placeholder="Invite Code" class="form-control"/>
+                                        <span class="input-group-addon">
+                                        </span>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="footer">
+                                    <button type="submit" class="btn btn-danger btn-round px-4">REGISTER</button>
+                                    <br>
+                                    <br>
+                                    <h5>Already Have An Account ?&nbsp; <a href="{% url 'login' %}" class="link"><strong>LOGIN</strong></a></h5>
+                                    <p><input type="checkbox">  I Agree<a href=""> Privacy Policy</a></p>
+                                    <br>
+                                </div>
+                            </form>
+                    </div>
+                </div>   
+            </div>        
+        </div>
+
+    </main>
+
+    <!-- main end -->
+{% endblock %}
